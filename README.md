@@ -26,8 +26,8 @@ def lambda_handler(event, context):
         ]
         )
     instance_id = response['Instances'][0]['InstanceId']
-
-
+    return "Successfully launched EC2 instance"
+    
     ###################################################################################
 
     import boto3
@@ -78,4 +78,4 @@ def lambda_handler(event, context):
             "instance_id": instance_id
         })
     }
-    return "Successfully launched EC2 instance"
+  
